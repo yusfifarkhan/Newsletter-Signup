@@ -183,6 +183,8 @@ app.post("/unsub", (req, res) => {
 });
 
 /* Port Listener */
-app.listen(serverPort || 3000, () => {
-  console.log(`Server is runing in: http://127.0.0.1:${serverPort || 3000}/`);
+app.listen(process.env.PORT || serverPort, () => {
+  console.log(
+    `Server is runing in: http://127.0.0.1:${process.env.PORT || serverPort}/`
+  );
 });
